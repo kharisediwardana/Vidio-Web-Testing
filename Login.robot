@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Vidio.com Login Fitur Web Testing
 Library            SeleniumLibrary
-Library            Debug Library
+Resource           ../Page/_ImportPage.robot
 
 *** Variable ***
 ${email}  kharisediwardana@gmail.com
@@ -40,10 +40,10 @@ Verify Login is Success
 *** Test Cases ***
 Make Sure Login Fitur is Work
     Open Vidio
-    Verify Login Button is Loaded
-    Click Login Button
-    Verify Login Page is Loaded
-    Input Email and Password
-    Click Login
-    Verify Login is Success
+    HomePage.Verify Login Button is Loaded
+    HomePage.Click Login Button
+    LoginPage.Verify Login Page is Loaded
+    LoginPage.Input Email and Password
+    LoginPage.Click Login
+    LoginPage.Verify Login is Success
     Close Browser
