@@ -3,13 +3,9 @@ Documentation          Vidio.com search fitur testing
 Library                SeleniumLibrary     
 Resource                ../Page/_ImportPage.robot
 
-*** Keyword ***
-Open Vidio
-    Open Browser  https://Vidio.com  Chrome
-
 *** Test Cases ***
 Make Sure Search Item Equal with Search Result
-    Open Vidio
+    Open Browser    https://Vidio.com  Chrome
     HomePage.Verify Search Bar is Loaded
     HomePage.Click Search Bar
     HomePage.Input Text on Search Bar    Sherina
